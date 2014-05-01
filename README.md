@@ -24,7 +24,7 @@ the rest of it...
 
 ###Oddities
 
-In the DataService while debugging, although the Register method works I can't hove over variables to see there content.
+In the DataService while debugging, although the Register method works I can't hover over variables to see there content.
 Adding them to watch results in a dreaded "The name '_whatEver_' does not exist in the current context"
 If I inspect this. in the Locals Window I see the variables as IL names
 
