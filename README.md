@@ -33,8 +33,14 @@ If I inspect this. in the Locals Window I see the variables as IL names
  -		base	{"Object reference not set to an instance of an object."}	System.SystemException {System.NullReferenceException}
 
 
-
-
-
 ###Questions
 Should Register return a 201 Created? or does it use 200 and not return the created resource for security measure? Hence the 200?
+
+###Credits
+[MvvMLight Toolkit] (http://www.mvvmlight.com/) by @LBugnion
+
+[Fody] (https://github.com/Fody) by Simon Cropp 
+
+[SpyKid] (http://xamalot.com/asset/922aabea-74dd-463e-861c-c135e87d5132) image from Xamalot.com by rygle 
+
+Made icons with [PerfectTile] (http://www.geekchamp.com/marketplace/components/perfectile) by Nirmitk

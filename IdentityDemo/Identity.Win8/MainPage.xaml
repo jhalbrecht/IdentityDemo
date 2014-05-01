@@ -226,7 +226,7 @@
                     Height="41" />
 
             <TextBlock x:Name="PageTitle"
-                       Text="my mvvm app"
+                       Text="Identity Demonstration"
                        Style="{StaticResource HeaderTextBlockStyle}"
                        Grid.Column="1"
                        IsHitTestVisible="false"
@@ -246,24 +246,7 @@
                    TextAlignment="Center"
                    FontWeight="Light"
                    TextWrapping="WrapWholeWords" />
-
-        <local:TestUserControl x:Name="Bottom"
-                               HorizontalAlignment="Left"
-                               Height="100"
-                               VerticalAlignment="Bottom"
-                               Width="790"
-                               Grid.Row="1"
-                               Margin="120,0,0,80" />
-
-        <!--<Button Content="Second page"
-                x:Name="NextPageButton"
-                HorizontalAlignment="Right"
-                VerticalAlignment="Top"
-                Margin="10"
-                Command="{Binding NavigateCommand}" />-->
     </Grid>
-
-
     <common:PageBase.BottomAppBar>
         <AppBar>
             <Grid>
@@ -274,6 +257,10 @@
                 <StackPanel Orientation="Horizontal" />
                 <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal">
 
+                    <!--
+                    
+                    Will probably use these later.... 
+                    
                     <AppBarButton x:Name="Refresh"
                                   Command="{Binding RefreshButtonCommand}"
                                   CommandParameter="{Binding}"
@@ -288,9 +275,10 @@
                     <AppBarButton x:Name="FilePost"
                                   Command="{Binding FilePostCommand}"
                                   CommandParameter="{Binding}"
-                                  HorizontalAlignment="Stretch" Label="File Post" VerticalAlignment="Stretch" Icon="Add" />
+                                  HorizontalAlignment="Stretch" Label="File Post" VerticalAlignment="Stretch" Icon="Add" />-->
 
                     <AppBarButton x:Name="NextPageButton"
+                                  Icon="Go"
                                   Label="Navigate"
                                   HorizontalAlignment="Stretch"
                                   VerticalAlignment="Stretch"
@@ -299,7 +287,4 @@
             </Grid>
         </AppBar>
     </common:PageBase.BottomAppBar>
-
-
-
 </common:PageBase>

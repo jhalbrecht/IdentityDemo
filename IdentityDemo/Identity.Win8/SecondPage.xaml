@@ -127,15 +127,18 @@
         </Grid>-->
         <Grid Grid.Row="1">
             <StackPanel Height="280">
-                <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal" >
+                    <Border Width="50"/>
                     <TextBlock Text="RegisterUser name " Style="{StaticResource BodyTextBlockStyle}" />
+                    <Border Width="10"/>
                     <TextBox Text="{Binding UserName, Mode=TwoWay}"/>
+                    <Border Width="10"/>
                     <TextBlock Text="RegisterUser password " Style="{StaticResource BodyTextBlockStyle}" />
+                    <Border Width="10"/>
                     <TextBox Text="{Binding Password, Mode=TwoWay}"/>
                 </StackPanel>
             </StackPanel>
         </Grid>
-
     </Grid>
 
     <common:PageBase.BottomAppBar>
@@ -152,15 +155,13 @@
                                   Command="{Binding RegisterCommand}"
                                   CommandParameter="{Binding}"
                                   HorizontalAlignment="Stretch" Label="Register" VerticalAlignment="Stretch"
-                                  Icon="Add" />
+                                  Icon="AddFriend" />
 
                     <AppBarButton x:Name="Login"
                                   Command="{Binding LoginCommand}"
                                   CommandParameter="{Binding}"
                                   HorizontalAlignment="Stretch" Label="Login" VerticalAlignment="Stretch"
-                                  Icon="Refresh" />
-
-
+                                  Icon="Permissions" />
                 </StackPanel>
             </Grid>
         </AppBar>

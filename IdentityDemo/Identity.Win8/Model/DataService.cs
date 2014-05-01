@@ -24,7 +24,7 @@ namespace Identity.Win8.Model
             // Use this to connect to the actual data service
 
             // Simulate by returning a DataItem
-            var item = new DataItem("Welcome to MVVM Light");
+            var item = new DataItem("Welcome to Identity Demo");
             return item;
         }
         public string BaseAddress { get; set; }
@@ -44,8 +44,6 @@ namespace Identity.Win8.Model
             };
             var client = new HttpClient();
             var jsonBody = new StringContent(JsonConvert.SerializeObject(regModel), Encoding.UTF8, "application/json");
-            // TODO dump that magic string!
-            // HttpResponseMessage response = await client.PostAsync(String.Format("{0}/api/Account/RegisterUser", "http://localhost:27687/"), jsonBody);
             HttpResponseMessage response =
                 await client.PostAsync(String.Format("{0}api/Account/Register", BaseAddress), jsonBody);
             string result = await response.Content.ReadAsStringAsync();
@@ -67,7 +65,6 @@ namespace Identity.Win8.Model
             Logger.Log(this, postString);
 
             HttpResponseMessage response =
-                // await handlerClient.PostAsync(string.Format("{0}Token", BaseAddress), new StringContent(postString));
                 await handlerClient.PostAsync(string.Format("{0}Token", BaseAddress), content);
             Logger.Log(this, "response", response.Content.ToString());
 
@@ -81,6 +78,5 @@ namespace Identity.Win8.Model
             return tokenResponse.AccessToken;
             // return true;
         }
-
     }
 }
