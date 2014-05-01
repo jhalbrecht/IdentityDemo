@@ -1,0 +1,34 @@
+
+http://www.asp.net/web-api/overview/security/individual-accounts-in-web-api
+http://stackoverflow.com/questions/23215672/in-web-api-owin-architecture-where-are-requests-to-token-handled
+
+
+http://localhost:8782/api/values
+
+Register
+http://localhost:8782/api/Account/Register
+Content-Type: application/json
+sampson, rover / Avlpw42Us
+{
+  "Email": "Alice@somewhere.com",
+  "Password": "Pw4Ta;TooUse",
+  "ConfirmPassword": "Pw4Ta;TooUse"
+}
+
+Token
+Content-Type: application/x-www-form-urlencoded
+grant_type=password&username=Alice@somewhere.com&password=Pw4Ta;TooUse
+
+HTTP/1.1 200 OK
+Cache-Control: no-cache
+Pragma: no-cache
+Content-Length: 692
+Content-Type: application/json;charset=UTF-8
+Expires: -1
+Server: Microsoft-IIS/8.0
+Set-Cookie: .AspNet.Cookies=W_Tssqnred6PKeyMW5wMr47a3dy6NLM30YYVTpfFs-7OC1aIPjSWuCsG5FzvqUKitCfJT6sHCgIrx38_LSpLV43PNY6fP0dh6vbSUkPNsQKkyMHENONrjJAguaeYkbpGnmXQqit-NPwIgUYMYkfzyzNX2ZBxVODF8sVJhI3fZObEWDY3vbMi__40LAal9sVgGockrBRSDIDFWO2lGZ-VZWLYbP_1IA3eYHbb4fiSUuEJ0qr6-VoJD1nH_hR33Mvx6kO4QHOEkEF3pxe--KtKHeZG3Mwi0z1jd4lk-wSh6oo6WfgMWCunP71LeKEKVYpn5DvVNw_ZRLdKfj_DtqtpyOGhcSbgdDh7nhJb84Gh_ny2dnvjji6DjSApeyOBhrpo4vxFoXKc5Lb0q0t2kYd4VzBmcX84ftemNzm1WIS1ytMpb-oHMxoBSTtp7NmyRMKc3gd2ouTwhtWyKWihmqelspOAJ9-8SC_sdwveOOyUmEE; path=/; HttpOnly
+X-SourceFiles: =?UTF-8?B?YzpcdXNlcnNcamVmZlxkb2N1bWVudHNcdmlzdWFsIHN0dWRpbyAyMDEzXFByb2plY3RzXElkZW50aXR5RGVtb1xJZGVudGl0eURlbW8uV2ViXFRva2Vu?=
+X-Powered-By: ASP.NET
+Date: Wed, 30 Apr 2014 18:17:16 GMT
+
+{"access_token":"pz-2vAJ6P0OVODC4N4tsg8aq0gQphDBkI72X9brJOJnS9EqQomWfyeiNpiey1DuUx_fDEUMLMRf6_SZ-xrTsJWjaeduHH1R6UmbcKZEdgxVRNRo6YsL5Lx95XrjX-8P3l9cIka86MkNtJC3ZbpkV_uB9rclVS22pBLrDcdB_vYBgvOAYu89L5Pz6rqj1jP7I7Ru06NYhVnQ-j7IzRUg2QxZ1sYlC4ACXAgo2B9QV7b9kn7fw5-I7lWDXKgPhJCfKkp5yRtl77f0ClN6gSSJBVXXjO20IIXvO6i7FUaQvh3vJslZhonDkV63sl74h-KtygPvbgvPvrDItWmrbXIt9u4sUv0IkidbiN6czAPg_SIa1VhKhw2xa1ze4wKK_cT38kQgdJdXaFo-SG_Nvo6YqaLbJD4eUzFDi_dTqOyO__TSKlom204pGzoLBioynVzLCJddoqOWWN7gxcOktVbwl694rYk2gj15prpd_Ew5yPM3pG-bL-bZXhdgBq6mUAPct","token_type":"bearer","expires_in":1209599,"userName":"Alice@somewhere.com",".issued":"Wed, 30 Apr 2014 18:17:15 GMT",".expires":"Wed, 14 May 2014 18:17:15 GMT"}

@@ -1,0 +1,120 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30324.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityDemo.Web", "IdentityDemo.Web\IdentityDemo.Web.csproj", "{EF0C6DB8-87CA-4B4B-A977-2AC7B80E528B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A5FD4833-E1CE-4C89-824F-2BA10B58454D}"
+	ProjectSection(SolutionItems) = preProject
+		FiddlerNotes.txt = FiddlerNotes.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Demo.Pcl", "Identity.Demo.Pcl\Identity.Demo.Pcl.csproj", "{2AAD58EB-9DED-4162-BA89-C70C57F72C36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Win8", "Identity.Win8\Identity.Win8.csproj", "{75CCCE90-11AA-405D-A128-FEA952708D15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppDevPro.Utility.Pcl", "AppDevPro.Utility.Pcl\AppDevPro.Utility.Pcl.csproj", "{54F32B01-6907-4F95-A6D0-C23D1EE66E14}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		AzureDebug|Any CPU = AzureDebug|Any CPU
+		AzureDebug|ARM = AzureDebug|ARM
+		AzureDebug|x64 = AzureDebug|x64
+		AzureDebug|x86 = AzureDebug|x86
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF0C6DB8-87CA-4B4B-A977-2AC7B80E528B}.AzureDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF0C6DB8-87CA-4B4B-A977-2AC7B80E528B}.AzureDebug|Any CPU.Build.0 = Debug|Any CPU
+		{EF0C6DB8-87CA-4B4B-A977-2AC7B80E528B}.AzureDebug|ARM.ActiveCfg = Debug|Any CPU
+		{EF0C6DB8-87CA-4B4B-A977-2AC7B80E528B}.AzureDebug|x64.ActiveCfg = Debug|Any CPU
+		{EF0C6DB8-87CA-4B4B-A977-2AC7B80E528B}.AzureDebug|x86.ActiveCfg = Debug|Any CPU
+		{EF0C6DB8-87CA-4B4B-A977-2AC7B80E528B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF0C6DB8-87CA-4B4B-A977-2AC7B80E528B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF0C6DB8-87CA-4B4B-A977-2AC7B80E528B}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{EF0C6DB8-87CA-4B4B-A977-2AC7B80E528B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EF0C6DB8-87CA-4B4B-A977-2AC7B80E528B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EF0C6DB8-87CA-4B4B-A977-2AC7B80E528B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF0C6DB8-87CA-4B4B-A977-2AC7B80E528B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF0C6DB8-87CA-4B4B-A977-2AC7B80E528B}.Release|ARM.ActiveCfg = Release|Any CPU
+		{EF0C6DB8-87CA-4B4B-A977-2AC7B80E528B}.Release|x64.ActiveCfg = Release|Any CPU
+		{EF0C6DB8-87CA-4B4B-A977-2AC7B80E528B}.Release|x86.ActiveCfg = Release|Any CPU
+		{2AAD58EB-9DED-4162-BA89-C70C57F72C36}.AzureDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AAD58EB-9DED-4162-BA89-C70C57F72C36}.AzureDebug|Any CPU.Build.0 = Debug|Any CPU
+		{2AAD58EB-9DED-4162-BA89-C70C57F72C36}.AzureDebug|ARM.ActiveCfg = Debug|Any CPU
+		{2AAD58EB-9DED-4162-BA89-C70C57F72C36}.AzureDebug|x64.ActiveCfg = Debug|Any CPU
+		{2AAD58EB-9DED-4162-BA89-C70C57F72C36}.AzureDebug|x86.ActiveCfg = Debug|Any CPU
+		{2AAD58EB-9DED-4162-BA89-C70C57F72C36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AAD58EB-9DED-4162-BA89-C70C57F72C36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AAD58EB-9DED-4162-BA89-C70C57F72C36}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{2AAD58EB-9DED-4162-BA89-C70C57F72C36}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2AAD58EB-9DED-4162-BA89-C70C57F72C36}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2AAD58EB-9DED-4162-BA89-C70C57F72C36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AAD58EB-9DED-4162-BA89-C70C57F72C36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AAD58EB-9DED-4162-BA89-C70C57F72C36}.Release|ARM.ActiveCfg = Release|Any CPU
+		{2AAD58EB-9DED-4162-BA89-C70C57F72C36}.Release|x64.ActiveCfg = Release|Any CPU
+		{2AAD58EB-9DED-4162-BA89-C70C57F72C36}.Release|x86.ActiveCfg = Release|Any CPU
+		{75CCCE90-11AA-405D-A128-FEA952708D15}.AzureDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75CCCE90-11AA-405D-A128-FEA952708D15}.AzureDebug|Any CPU.Build.0 = Debug|Any CPU
+		{75CCCE90-11AA-405D-A128-FEA952708D15}.AzureDebug|Any CPU.Deploy.0 = Debug|Any CPU
+		{75CCCE90-11AA-405D-A128-FEA952708D15}.AzureDebug|ARM.ActiveCfg = Debug|ARM
+		{75CCCE90-11AA-405D-A128-FEA952708D15}.AzureDebug|ARM.Build.0 = Debug|ARM
+		{75CCCE90-11AA-405D-A128-FEA952708D15}.AzureDebug|ARM.Deploy.0 = Debug|ARM
+		{75CCCE90-11AA-405D-A128-FEA952708D15}.AzureDebug|x64.ActiveCfg = Debug|x64
+		{75CCCE90-11AA-405D-A128-FEA952708D15}.AzureDebug|x64.Build.0 = Debug|x64
+		{75CCCE90-11AA-405D-A128-FEA952708D15}.AzureDebug|x64.Deploy.0 = Debug|x64
+		{75CCCE90-11AA-405D-A128-FEA952708D15}.AzureDebug|x86.ActiveCfg = Debug|x86
+		{75CCCE90-11AA-405D-A128-FEA952708D15}.AzureDebug|x86.Build.0 = Debug|x86
+		{75CCCE90-11AA-405D-A128-FEA952708D15}.AzureDebug|x86.Deploy.0 = Debug|x86
+		{75CCCE90-11AA-405D-A128-FEA952708D15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75CCCE90-11AA-405D-A128-FEA952708D15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75CCCE90-11AA-405D-A128-FEA952708D15}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{75CCCE90-11AA-405D-A128-FEA952708D15}.Debug|ARM.ActiveCfg = Debug|ARM
+		{75CCCE90-11AA-405D-A128-FEA952708D15}.Debug|ARM.Build.0 = Debug|ARM
+		{75CCCE90-11AA-405D-A128-FEA952708D15}.Debug|ARM.Deploy.0 = Debug|ARM
+		{75CCCE90-11AA-405D-A128-FEA952708D15}.Debug|x64.ActiveCfg = Debug|x64
+		{75CCCE90-11AA-405D-A128-FEA952708D15}.Debug|x64.Build.0 = Debug|x64
+		{75CCCE90-11AA-405D-A128-FEA952708D15}.Debug|x64.Deploy.0 = Debug|x64
+		{75CCCE90-11AA-405D-A128-FEA952708D15}.Debug|x86.ActiveCfg = Debug|x86
+		{75CCCE90-11AA-405D-A128-FEA952708D15}.Debug|x86.Build.0 = Debug|x86
+		{75CCCE90-11AA-405D-A128-FEA952708D15}.Debug|x86.Deploy.0 = Debug|x86
+		{75CCCE90-11AA-405D-A128-FEA952708D15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75CCCE90-11AA-405D-A128-FEA952708D15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75CCCE90-11AA-405D-A128-FEA952708D15}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{75CCCE90-11AA-405D-A128-FEA952708D15}.Release|ARM.ActiveCfg = Release|ARM
+		{75CCCE90-11AA-405D-A128-FEA952708D15}.Release|ARM.Build.0 = Release|ARM
+		{75CCCE90-11AA-405D-A128-FEA952708D15}.Release|ARM.Deploy.0 = Release|ARM
+		{75CCCE90-11AA-405D-A128-FEA952708D15}.Release|x64.ActiveCfg = Release|x64
+		{75CCCE90-11AA-405D-A128-FEA952708D15}.Release|x64.Build.0 = Release|x64
+		{75CCCE90-11AA-405D-A128-FEA952708D15}.Release|x64.Deploy.0 = Release|x64
+		{75CCCE90-11AA-405D-A128-FEA952708D15}.Release|x86.ActiveCfg = Release|x86
+		{75CCCE90-11AA-405D-A128-FEA952708D15}.Release|x86.Build.0 = Release|x86
+		{75CCCE90-11AA-405D-A128-FEA952708D15}.Release|x86.Deploy.0 = Release|x86
+		{54F32B01-6907-4F95-A6D0-C23D1EE66E14}.AzureDebug|Any CPU.ActiveCfg = AzureDebug|Any CPU
+		{54F32B01-6907-4F95-A6D0-C23D1EE66E14}.AzureDebug|Any CPU.Build.0 = AzureDebug|Any CPU
+		{54F32B01-6907-4F95-A6D0-C23D1EE66E14}.AzureDebug|ARM.ActiveCfg = AzureDebug|Any CPU
+		{54F32B01-6907-4F95-A6D0-C23D1EE66E14}.AzureDebug|x64.ActiveCfg = AzureDebug|Any CPU
+		{54F32B01-6907-4F95-A6D0-C23D1EE66E14}.AzureDebug|x86.ActiveCfg = AzureDebug|Any CPU
+		{54F32B01-6907-4F95-A6D0-C23D1EE66E14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54F32B01-6907-4F95-A6D0-C23D1EE66E14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54F32B01-6907-4F95-A6D0-C23D1EE66E14}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{54F32B01-6907-4F95-A6D0-C23D1EE66E14}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{54F32B01-6907-4F95-A6D0-C23D1EE66E14}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{54F32B01-6907-4F95-A6D0-C23D1EE66E14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54F32B01-6907-4F95-A6D0-C23D1EE66E14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54F32B01-6907-4F95-A6D0-C23D1EE66E14}.Release|ARM.ActiveCfg = Release|Any CPU
+		{54F32B01-6907-4F95-A6D0-C23D1EE66E14}.Release|x64.ActiveCfg = Release|Any CPU
+		{54F32B01-6907-4F95-A6D0-C23D1EE66E14}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
