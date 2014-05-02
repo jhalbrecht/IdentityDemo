@@ -10,7 +10,7 @@ namespace Identity.Demo.Pcl
     {
         public Configuration()
         {
-            _BaseAddress = "http://localhost:8782/";
+            _BaseAddress = "http://localhost.fiddler:8782/";
         }
 
         private string _BaseAddress;

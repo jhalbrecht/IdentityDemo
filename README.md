@@ -14,11 +14,13 @@ A demonstration sample to help learn Identity 2.0 based on the [article] (http:/
 1. include an upper case, numeral and special character
 
 ##What works
-You can register an account with the SecondPage. Navigate from the main screen with the app bar button 'Navigate'
+1. You can register an account with the SecondPage. Navigate from the main screen with the app bar button 'Navigate'
 Enter an email address and _strong_ password. click/touch Register in appBar.
 
+2. SecondPage Login button now retreives a Token.
+
 ##Yet to be implemented or completed
-the rest of it...
+Use the Token to validate a Get.
 
 ###Oddities
 

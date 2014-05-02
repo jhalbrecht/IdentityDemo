@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Text;
@@ -13,11 +14,10 @@ namespace Identity.Win8.Model
 {
     public class DataService : IDataService
     {
+        private Configuration _configuration;
         public DataService()
         {
-            Configuration _configuration = new Configuration();
-            BaseAddress = _configuration.BaseAddress;
-            Logger.Log(this, BaseAddress);
+            _configuration = new Configuration();
         }
         public async Task<DataItem> GetData()
         {
@@ -53,30 +53,33 @@ namespace Identity.Win8.Model
 
         public async Task<string> LoginUser(string username, string password)
         {
-            var handler = new HttpClientHandler();
-            handler.Credentials = new NetworkCredential(username, password);
-            Logger.Log(this, handler.Credentials.ToString());
-            var handlerClient = new HttpClient(handler);
-            var content = new MultipartFormDataContent();
-            string postString =
-                String.Format("username={0}&amp;password={1}&amp;grant_type=password",
-                    WebUtility.HtmlEncode(username), WebUtility.HtmlEncode(password));
-            content.Add(new StringContent(postString));
-            Logger.Log(this, postString);
+            string tokenUrl = string.Format("{0}Token", _configuration.BaseAddress);
+            var client = new HttpClient();
 
-            HttpResponseMessage response =
-                await handlerClient.PostAsync(string.Format("{0}Token", BaseAddress), content);
+            // using postBody I got invalid grant type
+            // using postData I got 200 OK! :-) TODO I wonder why? couldn't find a hex dump in fiddler composer
+            //string postBody =
+            //    String.Format("username={0}&amp;password={1}&amp;grant_type=password",
+            //        WebUtility.HtmlEncode(username), WebUtility.HtmlEncode(password));
+            //Logger.Log(this, postBody);
+            // HttpContent content = new StringContent(postBody);
+
+            var postData = new List<KeyValuePair<string, string>>();
+            postData.Add(new KeyValuePair<string, string>("username", username));
+            postData.Add(new KeyValuePair<string, string>("password", password));
+            postData.Add(new KeyValuePair<string, string>("grant_type", "password"));
+
+            Logger.Log(this, "postData", postData.ToString());
+            HttpContent content = new FormUrlEncodedContent(postData);
+            HttpResponseMessage response = await client.PostAsync(tokenUrl, content);
             Logger.Log(this, "response", response.Content.ToString());
-
-            // var jsonBody = new StringContent(JsonConvert.SerializeObject(regModel), Encoding.UTF8, "application/json"); // TODO dump that magic string!
-            // HttpResponseMessage response = await client.PostAsync(String.Format("{0}Token", BaseAddress), jsonBody);
             string result = await response.Content.ReadAsStringAsync();
             Logger.Log(this, "result", result);
-            var tokenResponse = JsonConvert.DeserializeObject<TokenResponseModel>(result);
+            TokenResponseModel tokenResponse = JsonConvert.DeserializeObject<TokenResponseModel>(result);
             AccessToken = tokenResponse.AccessToken;
-            Logger.Log(this, "tokenResponse.AccessToken", tokenResponse.AccessToken);
-            return tokenResponse.AccessToken;
-            // return true;
+            Logger.Log(this, "AccessToken", AccessToken);
+            client.Dispose();
+            return AccessToken;
         }
     }
 }
