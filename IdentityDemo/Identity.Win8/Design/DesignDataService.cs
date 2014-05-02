@@ -14,20 +14,5 @@ namespace Identity.Win8.Design
             var item = new DataItem("Welcome to Identity Demo [design]");
             return Task.FromResult(item);
         }
-
-        public Task<string> RegisterUser(string username, string password)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public Task<string> LoginUser(string username, string password)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public async Task<List<string>> GetValues()
-        {
-            return new List<string> {"jeffa", "sampson", "from", "sampledata"};
-        }
     }
 }

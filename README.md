@@ -13,6 +13,9 @@ A demonstration sample to help learn Identity 2.0 based on the [article] (http:/
 ###Strong passwords
 1. include an upper case, numeral and special character
 
+##Notes
+I have the url set to localhost.fiddler (_BaseAddress = "http://localhost.fiddler:8782/";). Be sure to have Fiddler running or change _BaseAddress in Identity.Demo.Pcl Configuration
+
 ##What works
 1. You can register an account with the SecondPage. Navigate from the main screen with the app bar button 'Navigate'
 Enter an email address and _strong_ password. click/touch Register in appBar.
@@ -24,17 +27,6 @@ Enter an email address and _strong_ password. click/touch Register in appBar.
 ##Yet to be implemented or completed
 Implement some program flow to make it more real world, maybe some error checking. However, :-), the Identity auth works.
 
-###Oddities
-
-In the DataService while debugging, although the Register method works I can't hover over variables to see there content.
-Adding them to watch results in a dreaded "The name '_whatEver_' does not exist in the current context"
-If I inspect this. in the Locals Window I see the variables as IL names
-
-+		CS$0$0002	{System.Runtime.CompilerServices.TaskAwaiter<system.net.http.httpresponsemessage>}	System.Runtime.CompilerServices.TaskAwaiter<system.net.http.httpresponsemessage>
- -		IsCompleted	'CS$0$0002.IsCompleted' threw an exception of type 'System.NullReferenceException'	bool {System.NullReferenceException}
- -		base	{"Object reference not set to an instance of an object."}	System.SystemException {System.NullReferenceException}
-
-
 ###Questions
 Should Register return a 201 Created? or does it use 200 and not return the created resource for security measure? Hence the 200?
 
@@ -43,8 +35,22 @@ Should Register return a 201 Created? or does it use 200 and not return the crea
 
 [MvvMLight Toolkit] (http://www.mvvmlight.com/) by @LBugnion
 
-[Fody] (https://github.com/Fody) by Simon Cropp 
+[Fody] (https://github.com/Fody) by Simon Cropp
 
-[SpyKid] (http://xamalot.com/asset/922aabea-74dd-463e-861c-c135e87d5132) image from Xamalot.com by rygle 
+[SpyKid] (http://xamalot.com/asset/922aabea-74dd-463e-861c-c135e87d5132) image from Xamalot.com by rygle
 
-Made icons with [PerfectTile] (http://www.geekchamp.com/marketplace/components/perfectile) by Nirmitk
+I made the icons and tiles with [PerfectTile] (http://www.geekchamp.com/marketplace/components/perfectile) by Nirmitk
+
+###Oddities
+
+In the DataService while debugging, although the Register method works I can't hover over variables to see there content.
+Adding them to watch results in a dreaded "The name '_whatEver_' does not exist in the current context"
+If I inspect this. in the Locals Window I see the variables as IL names. Note the NullReferenceException when I expand CS$0$0002
+
++		CS$0$0002	{System.Runtime.CompilerServices.TaskAwaiter<system.net.http.httpresponsemessage>}	System.Runtime.CompilerServices.TaskAwaiter<system.net.http.httpresponsemessage>
+-		IsCompleted	'CS$0$0002.IsCompleted' threw an exception of type 'System.NullReferenceException'	bool {System.NullReferenceException}
+-		base	{"Object reference not set to an instance of an object."}	System.SystemException {System.NullReferenceException}
+
+I moved the identity code (RegisterUser...) that was causing the oddities into a portable class library (PCL). Debugging the same code in the PCL behaves as I would expect.
+I can inspect Locals while stopped on a breakpoint. I'd like to learn how to fix the problem in the other code. 
+Must be some offending assembley. Hope to learn how to get more verbose build log and figure it out... some day...

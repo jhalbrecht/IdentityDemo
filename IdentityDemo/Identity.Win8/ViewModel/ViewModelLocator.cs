@@ -12,6 +12,7 @@
 using System.Diagnostics.CodeAnalysis;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
+using Identity.Demo.Pcl;
 using Microsoft.Practices.ServiceLocation;
 using Identity.Win8.Common;
 using Identity.Win8.Design;
@@ -69,6 +70,7 @@ namespace Identity.Win8.ViewModel
                 SimpleIoc.Default.Register<IDataService, DataService>();
             }
 
+            SimpleIoc.Default.Register<IIdentityService, IdentityService>();
             SimpleIoc.Default.Register<IDialogService, DialogService>();
             SimpleIoc.Default.Register<INavigationService, NavigationService>();
             SimpleIoc.Default.Register<MainViewModel>();

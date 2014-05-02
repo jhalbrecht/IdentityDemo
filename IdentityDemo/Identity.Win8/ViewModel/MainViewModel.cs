@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using AppDevPro.Utility.Pcl;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
+using Identity.Demo.Pcl;
 using Identity.Win8.Common;
 using Identity.Win8.Model;
 
@@ -23,6 +24,7 @@ namespace Identity.Win8.ViewModel
         public const string WelcomeTitlePropertyName = "WelcomeTitle";
 
         private readonly IDataService _dataService;
+        private readonly IIdentityService _identityService;
         private readonly INavigationService _navigationService;
 
         private RelayCommand _navigateCommand;
@@ -118,11 +120,10 @@ namespace Identity.Win8.ViewModel
         /// <summary>
         /// Initializes a new instance of the MainViewModel class.
         /// </summary>
-        public MainViewModel(
-            IDataService dataService,
-            INavigationService navigationService)
+        public MainViewModel(IDataService dataService, INavigationService navigationService, IIdentityService identityService)
         {
             _dataService = dataService;
+            _identityService = identityService;
             _navigationService = navigationService;
             Initialize();
         }
@@ -151,7 +152,7 @@ namespace Identity.Win8.ViewModel
                 var item = await _dataService.GetData();
                 _originalTitle = item.Title;
                 WelcomeTitle = item.Title;
-                var strings = await _dataService.GetValues(); 
+                var strings = await _identityService.GetValues(); 
                 Strings = new ObservableCollection<string>(strings);
             }
             catch (Exception ex)
