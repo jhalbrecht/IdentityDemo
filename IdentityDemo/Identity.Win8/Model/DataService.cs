@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using AppDevPro.Utility.Pcl;
@@ -29,6 +30,7 @@ namespace Identity.Win8.Model
         }
         public string BaseAddress { get; set; }
         public string AccessToken { get; set; }
+        public List<string> Strings { get; set; } 
         public IDialogService DialogService
         {
             get { return ServiceLocator.Current.GetInstance<IDialogService>(); }
@@ -79,7 +81,24 @@ namespace Identity.Win8.Model
             AccessToken = tokenResponse.AccessToken;
             Logger.Log(this, "AccessToken", AccessToken);
             client.Dispose();
+            await GetValues();
             return AccessToken;
+        }
+
+        public async Task<List<string>> GetValues()
+        {
+            HttpClient client = new HttpClient();
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            client.DefaultRequestHeaders.Add("Authorization", String.Format("Bearer {0}", AccessToken));
+            HttpResponseMessage response = await client.GetAsync(string.Format("{0}api/Values", _configuration.BaseAddress));
+            var data = await response.Content.ReadAsStringAsync();
+            Strings = await JsonConvert.DeserializeObjectAsync<List<string>>(data);
+            Logger.Log(this, "strings");
+            foreach (var s in Strings)
+                Logger.Log(s);
+
+            return Strings;
         }
     }
 }

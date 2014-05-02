@@ -1,4 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Identity.Win8.Model;
 
 namespace Identity.Win8.Design
@@ -9,7 +11,7 @@ namespace Identity.Win8.Design
         {
             // Use this to create design time data
 
-            var item = new DataItem("Welcome to MVVM Light [design]");
+            var item = new DataItem("Welcome to Identity Demo [design]");
             return Task.FromResult(item);
         }
 
@@ -21,6 +23,11 @@ namespace Identity.Win8.Design
         public Task<string> LoginUser(string username, string password)
         {
             throw new System.NotImplementedException();
+        }
+
+        public async Task<List<string>> GetValues()
+        {
+            return new List<string> {"jeffa", "sampson", "from", "sampledata"};
         }
     }
 }

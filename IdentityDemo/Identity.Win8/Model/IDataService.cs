@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Identity.Win8.Model
 {
@@ -7,5 +8,6 @@ namespace Identity.Win8.Model
         Task<DataItem> GetData();
         Task<string> RegisterUser(string username, string password);
         Task<string> LoginUser(string username, string password);
+        Task<List<string>> GetValues();
     }
 }

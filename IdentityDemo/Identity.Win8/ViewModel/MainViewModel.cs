@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using AppDevPro.Utility.Pcl;
 using GalaSoft.MvvmLight;
@@ -27,6 +28,7 @@ namespace Identity.Win8.ViewModel
         private RelayCommand _navigateCommand;
         private string _originalTitle;
         private string _welcomeTitle = string.Empty;
+        public ObservableCollection<string> Strings { get; set; }
 
         /// <summary>
         /// Gets the NavigateCommand.
@@ -149,6 +151,8 @@ namespace Identity.Win8.ViewModel
                 var item = await _dataService.GetData();
                 _originalTitle = item.Title;
                 WelcomeTitle = item.Title;
+                var strings = await _dataService.GetValues(); 
+                Strings = new ObservableCollection<string>(strings);
             }
             catch (Exception ex)
             {

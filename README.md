@@ -19,8 +19,10 @@ Enter an email address and _strong_ password. click/touch Register in appBar.
 
 2. SecondPage Login button now retreives a Token.
 
+3. Displays Values on MainPage from the api/Values controller if you first login from the SecondPage, return to MainPage and use appBar refresh button.
+
 ##Yet to be implemented or completed
-Use the Token to validate a Get.
+Implement some program flow to make it more real world, maybe some error checking. However, :-), the Identity auth works.
 
 ###Oddities
 
